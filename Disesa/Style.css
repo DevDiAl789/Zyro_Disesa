@@ -1,0 +1,226 @@
+:root {
+    /*
+    --primero:var(--primero) #3373b0;
+    --segundo:var(--segundo) #2FC117;
+    --tercero:var(--tercero)#5E5E5E;
+*/
+
+    /*Sugerencia de colores pt1*/
+    --primero: #F2F2F2;
+    --segundo: #94A1A6;
+    --tercero: #65736F;
+    --cuarto: #5E7314;
+    --quinto: #403624;
+    /*
+    Sugerencia de colores pt2
+    --primero:#2D3E40;
+    --segundo:#387373;
+    --tercero:#93BFB7;
+    --cuarto:#97A6A0;
+    --quinto:#E4F2E7;
+
+    */
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Dosis', sans-serif;
+    background-image: linear-gradient(to top, var(--primero) 0%, var(--tercero) 100%);
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(black);
+    font-weight: bold;
+}
+/*Menu principal*/
+.Menu a {
+    display: block;
+    text-align: center;
+    color: var(--primero);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.Menu a:hover {
+    background-color: var(--segundo);
+    color: var(--quinto);
+}
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.Contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 760px) {
+    .Menu {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+/*Botones*/
+.Boton {
+    background-color: var(--tercero);
+    color: var(--quinto);
+    padding: 1rem 3rem;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+.Boton :hover {
+    cursor: pointer;
+}
+
+.Opcion_Rapida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .Boton {
+        width: auto;
+    }
+}
+
+.B2 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .B2 {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+}
+.Alinear-derecha {
+    justify-content: flex-end;
+}
+.Enviar .Boton {
+    width: 100%;
+}
+/*Linea de servicios*/
+.Nuestros-servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Nuestros-servicios h3 {
+    color: var(--quinto);
+}
+
+.Nuestros-servicios p {
+    line-height: 2;
+    text-align: center;
+}
+.Iconos{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--cuarto);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .Servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+
+}
+/*Barra de contacto*/
+.Contenedor {
+    background-color: var(--cuarto);
+}
+/*Formulario*/
+.Formulario {
+    background-color: var(--tercero);
+    width: min(60rem, 100%);
+    /*uTILIZA EL VALOR MAS PEQUENO*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.Formulario fieldset {
+    border: none;
+}
+.Formulario legend {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--quinto);
+}
+
+@media (min-width:768px) {
+    .Contenedor-formulario {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+}
+.Campo {
+    margin-bottom: 1rem;
+}
+
+.Campo label {
+    color: var(--quinto);
+    font-weight: bold;
+    margin-bottom:.5rem;
+    display: block;
+}
+
+.Campo input {
+    width: 100%;
+    border: none;
+    padding:1.5rem;
+    border-radius:.5rem;
+    border: none;
+}
+
+.Campo textarea {
+    height:20rem;
+}
+/*Con la funcion nth-child podemos mandar a llamar a una de las variantes de la funcion campo*/
+.Campo:nth-child(3), .Campo:nth-child(4) {
+    grid-column: 1/3;
+}
+
