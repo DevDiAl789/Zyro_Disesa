@@ -47,16 +47,16 @@ h3 {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     text-align: center;
     color: var(black);
     font-weight: bold;
 }
-.Opcion_Rapida {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+p{
+    
 }
+
 /*Menu principal*/
 .Menu a {
     display: block;
@@ -64,7 +64,7 @@ h3 {
     color: var(--primero);
     text-decoration: none;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: bold;
     padding: 1rem;
 }
 
@@ -102,12 +102,6 @@ h3 {
     cursor: pointer;
 }
 
-.Opcion_Rapida {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 @media (min-width: 768px) {
     .Boton {
         width: auto;
@@ -130,38 +124,26 @@ h3 {
     justify-content: flex-end;
 }
 .Enviar .Boton {
-    width: 100%;
+    max-width: 100%;
 }
 /*Linea de servicios*/
-.Servicios{
+.Contenedor, 
+.Motivos{
     text-align: center;
 }
-.Nuestros-servicios {
+.Motivos__campos, 
+.Contenedor__Servicios {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.Nuestros-servicios h3 {
-    color: var(--quinto);
-}
-
-.Nuestros-servicios p {
-    line-height: 2;
-    text-align: center;
-}
-.Iconos{
-    height: 10rem;
-    width: 10rem;
-    background-color: var(--cuarto);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+.Contenedor__imagen{
     align-items: center;
 }
 
 @media (min-width: 768px) {
-    .Servicios {
+    .Motivos__campos, 
+    .Contenedor__Servicios {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 1rem;
@@ -176,17 +158,17 @@ h3 {
     
 }
 /*Formulario*/
-.formulario {
+.Contacto {
     background-color: var(--tercero);
     width: min(60rem, 100%);
     margin: 0 auto;
     padding: 2rem;
     border-radius: 2rem;
 }
-.formulario fieldset {
+.Contacto fieldset {
     border: none;
 }
-.formulario legend {
+.Contacto__campo{
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
@@ -195,7 +177,7 @@ h3 {
 }
 
 @media (min-width:768px) {
-    .Contenedor-formulario {
+    .Contacto {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto auto 20rem;

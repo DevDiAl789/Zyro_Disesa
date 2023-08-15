@@ -1,0 +1,246 @@
+:root {
+    --fuenteprincipal:'Victor Mono', monospace;
+    /*Colores
+    --color1:#FFBC67;
+    --color2:#DA727E;
+    --color3:#AC6C82;
+    --color4:#685C79;
+    --color5:#455C7B;
+    --color6: rgb(233,287,2)*/
+    /*   Sugerencia 2 de colores*/
+    --color1: #618C20;
+    --color2: #F2C029;
+    --color3: #F2CA7E;
+    --color4: #F28627;
+    --color5: #D94B18;
+
+}
+
+html {
+    box-sizing: border-box;
+    /*Poner un font size en 62.5 iguala  1rem a 10px*/
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*Globales*/
+body {
+    background-image: linear-gradient(95deg, var(--color4) 1%, var(--color1) 100%);/*Degradado de colores*/
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: var(--fuenteprincipal);
+    color: var(--color2);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.Contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--color1);
+    font-family: var(--fuenteprincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/*Header*/
+.Header {
+    display: flex;
+    justify-content: center;
+}
+
+/*.header__logo {
+    /*En caso de querer darle margen al logo aplicamos lo siguiente*/
+    /*
+    margin:3rem 0;
+}    */
+
+/*footer*/
+.footer{
+    background-color: var(--color2);
+    padding: .5rem 0;
+    margin-top: .5rem;
+}
+.footer__texto{
+    color: #618C20;
+    text-align: center;
+    font-family: var(--fuenteprincipal);
+}
+
+.navegacion {
+    background-color: var(--color2);
+    padding: 1rem 0;
+    /*Utilizamos flex cuando hay elementos dentro de otro contenedor*/
+    display: flex;
+    justify-content: center;
+    /*GAP funciona para separar elementos dentro de un contenedor*/
+    gap: 3rem;
+}
+
+.navegacion__enlace {
+    font-family: var(--fuenteprincipal);
+    color: var(--color1);
+    font-size: 2rem;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--color5);
+}
+/*grid*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.producto{
+    background-color: var(--color1);
+}
+
+.producto__informacion{
+
+}
+.producto__nombre{
+    font-size: 4rem;
+}
+.producto__precio{
+    font-size: 2rem;
+    color: var(--color3);
+}
+.producto__nombre,.producto__precio{
+    font-family: var(--fuenteprincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grafico--A{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    background-image: url(/IMG/grafico1.jpg);
+}
+.grafico--B{
+    background-image: url(/IMG/grafico2.jpg);
+    grid-column: 1 / 3;
+    grid-row: 8 / 9;
+}
+@media (min-width: 768px) {
+    .grafico--B{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+/*Nosotros*/
+.nosotros{
+    display:grid;
+    grid-template-rows: repeat(2,auto);
+}
+@media (min-width: 768px) {
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.nosotros__imagen{
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}
+/*Bloques*/
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(4 , 1fr);
+    }
+}
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.bloque{
+    text-align: center;
+}
+.bloque__titulo{
+    margin: 0;
+}
+    /*Pagina del producto*/
+@media (min-width: 768px) {
+    .vela{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.formulario__campo{
+/*Primero se aplica la anchura, despues el tipo y al final el color*/
+    border: 1rem solid var(--color3);
+    background-color: transparent;
+    color:black;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+.formulario__submit{
+    background-color: var(--color5);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuenteprincipal);
+    padding: 2rem;
+    /*Hace el cambio de color principal al color #4*/
+    transition: background-color .3s ease;
+    /*espacio del boton en grid*/
+    grid-template-columns: 1 / 3;
+}
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--color4);
+}
