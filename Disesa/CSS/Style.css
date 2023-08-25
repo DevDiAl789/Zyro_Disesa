@@ -5,6 +5,7 @@
     --tercero: #E6DFD9	;
     --cuarto: #BFB3A8;
     --quinto: #A3AB78;
+    --sexto:#403F3C;
     --Fuente_Heading:'Victor Mono', monospace;
     --fuente_Parrafos:'Roboto Mono', monospace;
 }
@@ -20,9 +21,13 @@ body{
     font-family: var(--fuente_Parrafos);
     font-size: 1.6rem;
     line-height: 2;
+    background-image: linear-gradient(to top, var(--segundo) 0%, var(--tercero) 50%);
 }
+
+
+
 /*Elementos globales*/
-.Contenedor{
+.contenedor{
     max-width: 120rem;
     width: 90%;
     margin: 0 auto;
@@ -32,6 +37,7 @@ a{
 }
 h1,h2,h3,h4{
     font-family: var(--Fuente_Heading);
+    line-height: 1.2rem;
 }
 h1{
     font-size: 4.8rem;
@@ -60,7 +66,7 @@ img{
 }
 /*header*/
 .header{
-    background-image: url(/img/banner.jpg);
+    background-image: url(/img/tiles-shapes-2617112_1920.jpg);
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -68,7 +74,7 @@ img{
 }
 .header__texto{
     text-align: center;
-    color: var(--tercero);
+    color: var(--sexto);
     margin-top: 5rem;
 }
 @media (min-width: 768px) {
@@ -83,8 +89,11 @@ img{
         align-items: center;
     }
 }
+.barra{
+    padding: 4rem;
+}
 .logo{
-    color: var(--quinto);
+    color: var(--sexto);
 }
 .logo__nombre{
     font-weight: 400;
@@ -93,6 +102,9 @@ img{
     font-weight: bold;
 }
 /*navegacion*/
+.navegacion a:hover {
+    background-color: var(--primero);
+}
 @media (min-width: 768px) {
     .navegacion{
         display: flex;
@@ -102,8 +114,9 @@ img{
 .navegacion__enlace{
     display: block;
     text-align: center;
-    font-size: 1.8rem;
-    color: var(--quinto);
+    font-size: 2rem;
+    color: var(--sexto);
+    font-weight: bold;
 }
 @media (min-width: 768px) {
     .contenido-principal{
@@ -121,22 +134,116 @@ img{
     margin-bottom: 0;
 }
 .boton{
+    border-radius:10%;
     display: block;
     font-family: var(--Fuente_Heading);
     color:black;
+    background-color: var(--quinto);
     text-align: center;
     padding: 1rem 3rem;
+    transition:background-color .3s ease;
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
 }
+
 @media (min-width: 768px) {
     .boton{
         /*utilizamos-inline block para aplicar un espacio al margen*/
         display: inline-block;
     }
 }
-.boton-primario{
+.boton:hover{
+    cursor: pointer;
     background-color: var(--segundo);
+}
+.boton-primario{
+    border: none;
+}
+.boton-secundario{
+    background-color: var(--quinto);
+    border: none;
+}
+.motivos{
+    list-style: none;
+}
+.widget{
+    border-bottom: 1px solid var(--primero);
+    margin-bottom: 2rem;
+}
+.widget:last-of-type{
+    border: none;
+    margin-bottom:0;
+}
+.widget-label{
+    font-family: var(--Fuente_Heading);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.widget-info{
+    font-weight: normal;
+    font-size: 2rem;
+}
+.footer{
+    background-color: #65736F;
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+/*Sobre nosotros*/
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sobre-nosotros__texto{
+        flex: 0 0 calc(50% - 1rem);
+
+    }
+    .sobre-nosotros__imagen{
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+/*Servicios*/
+.servicio{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--primero);
+}
+@media (min-width: 768px) {
+    .servicio{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.servicio:last-of-type{
+    border: none;
+}
+/*Contacto*/
+.contacto__back{
+    background-image: url(/img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*Contacto*/
+.formulario{
+    background-color: var(--tercero);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label{
+    flex:0 0 9rem;
+}
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--segundo);
+}
+.campo__field--textarea{
+    height: 20rem;
 }
