@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disesa</title>
+    <meta name="description" content="pagina web seguros">
+    <link rel="prefetch" href="servicios.html" as="document">
+    <link rel="preload" href="/CSS/normalize.css" as="Style">
     <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Borel&family=Dosis:wght@200;700&family=Handjet:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&family=Raleway:ital,wght@1,200;1,700&family=Roboto+Mono:wght@100&family=Source+Code+Pro&family=Tektur&family=Victor+Mono:ital,wght@1,100;1,400&display=swap" 
+    crossorigin="crossorigin" as="fonts">
     <link href="https://fonts.googleapis.com/css2?family=Borel&family=Dosis:wght@200;700&family=Handjet:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&family=Raleway:ital,wght@1,200;1,700&family=Roboto+Mono:wght@100&family=Source+Code+Pro&family=Tektur&family=Victor+Mono:ital,wght@1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" href="/CSS/Style.css" as="Style">
     <link rel="stylesheet" href="/CSS/Style.css">
 </head>
 <body>
@@ -13,26 +19,29 @@
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="/HTML/index.html">
-                    <h1 class="logo__nombre no-margin centrar-texto">Disesa<span class="logo__bold"> Seguros</span></h1>
+                    <h1 class="logo__nombre no-margin centrar-texto">Disesa </h1>
+                    <span class="logo__bold logo__nombre"> Seguros</span>
                 </a>
                 <nav class="navegacion">
                     <a href="/HTML/nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="/HTML/servicios.html" class="navegacion__enlace">Servicos</a>
+                    <a href="/HTML/servicios.html" class="navegacion__enlace">Servicios</a>
                     <a href="/HTML/contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="" class="navegacion__enlace">                        
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-filled" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAD33" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" stroke-width="0" fill="currentColor" />
+                      </svg>
+                    </a>
                 </nav>
             </div>
         </div>
-        <div class="header__texto">
-            <h2 class="no-margin">Imagina un futuro seguro</h2>
-            <p class="no-margin">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>    
     </header>
     <div class="contenedor contenido-principal">
         <main class="blog">
             <h3>Nuestros seguros</h3>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img loading="lazy" src="/img/2.png" alt="imagen#1">
+                    <img loading="lazy" src="/img/1.png" alt="imagen#1">
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Wuateke</h4>
@@ -43,7 +52,7 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img loading="lazy" src="/img/blog2.jpg" alt="imagen#2">
+                    <img loading="lazy" src="/img/2.png" alt="imagen#2">
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Opcion#1</h4>
@@ -54,7 +63,7 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img loading="lazy" src="/img/blog3.jpg" alt="imagen#3 ">
+                    <img loading="lazy" src="/img/7.png" alt="imagen#3 ">
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Opcion#1</h4>
@@ -83,14 +92,38 @@
         </aside>
     </div>
 <footer class="footer">
+    <div class="centrar-texto">
+        <a href="https://www.facebook.com/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAD33" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+              </svg>
+        </a>
+        <a href="https://twitter.com/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAD33" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+              </svg>
+        </a>
+        <a href="https://www.instagram.com/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4CAD33" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M16.5 7.5l0 .01" />
+              </svg>
+        </a>
+    </div>
     <div class="contenedor">
         <div class="barra">
+            <div>
+            </div>
             <a class="logo" href="/HTML/index.html">
-                <h1 class="logo__nombre no-margin centrar-texto">Disesa<span class="logo__bold"> Seguros</span></h1>
+                <h1 class="logo__nombre no-margin centrar-texto">Disesa</h1>
             </a>
             <nav class="navegacion">
                 <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                <a href="Servicios.html" class="navegacion__enlace">Servicos</a>
+                <a href="Servicios.html" class="navegacion__enlace">Servicios</a>
                 <a href="contacto.html" class="navegacion__enlace">Contacto</a>
             </nav>
         </div>
